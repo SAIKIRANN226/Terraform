@@ -1,8 +1,8 @@
-variable "instance-type" {
+variable "instance_type" {
     type = string
     default = "mongodb"
 }
-variable "ami-id" {
+variable "ami_id" {
     type = string
     default = "ami-0f3c7d07486cad139"
 }
