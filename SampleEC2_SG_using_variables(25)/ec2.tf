@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {    # it is web component if it is api then api component like that..
   ami           = "ami-0f3c7d07486cad139"   # this is devops-practice ami we can find it in AMI's-select public and then search 
   instance_type = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.roboshopall.id]  # this is nothing but using secuirty group in the instance [] is list or if you are creating instances in vpc then use this,so that terraform will automatically use this depencines and create first SG
+  #vpc_security_group_ids = [aws_security_group.roboshopall.id]  # this is nothing but using secuirty group in the instance [] is list or if you are creating instances in vpc then use this,so that terraform will automatically use this depencines and create first SG
   tags = {
     Name = "saikiran_instance"  # what ever the name you give here instance will create with this name only,make sure key names should start capital "N"
   }
