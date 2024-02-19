@@ -1,4 +1,4 @@
-variable "instance_type" {
+variable "instance-type" {
     type = string
     default = "mongodb"
 }
