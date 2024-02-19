@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {   
   count = 5 # count.index is a special variable
   ami           =  var.ami_id
-  instance_type = var.instance-names[count.index] == "mongodb" || var.instance-names[count.index] == mysql ? "t3.small" : "t2.micro"
+  instance_type = var.instance-names[count.index] == "mongodb" || var.instance-names[count.index] == "mysql" ? "t3.small" : "t2.micro"
   tags = {
     Name = var.instance-names[count.index]
   }
