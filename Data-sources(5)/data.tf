@@ -39,3 +39,7 @@ data "aws_ami" "aws-linux-2" {
     values = ["hvm"]
   }
 }
+
+data "aws_vpc" "default" {
+    default = true
+}
