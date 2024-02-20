@@ -18,3 +18,24 @@ data "aws_ami" "centos" {
     values = ["hvm"]
   }
 }
+
+data "aws_ami" "aws-linux-2" {
+    most_recent      = true
+    owners           = ["amazon"]
+    
+    
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-kernel-5.10-hvm-*"]  # * means after name what ever new date 
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
