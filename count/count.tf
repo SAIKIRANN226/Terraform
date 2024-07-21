@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  #count = 11 # count.index is a special variable given by terraform
+  #count = 11 # count.index is a special variable given by terraform,because it was creating instances with same names for that we use count.index
   count = length(var.instance_names)
   ami           = var.ami_id #devops-practice
   instance_type = var.instance_names[count.index] == "mongodb" || var.instance_names[count.index] == "mysql" || var.instance_names[count.index] == "shipping" ? "t3.small" : "t2.micro"
