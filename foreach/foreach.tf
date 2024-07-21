@@ -29,3 +29,5 @@ resource "aws_route53_record" "www" {
 # output "instances_info" {
 #   value = aws_instance.web
 # }
+
+# the above code is commented because it is taking too much terminal space it is showing more information we tested how the output will be comming 
