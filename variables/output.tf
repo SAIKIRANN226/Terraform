@@ -1,4 +1,5 @@
-# attribute refrence it will give all the information,output block is used to print the output of the resources in the terminal just terraform plan
+# attribute refrence ---> it will give all the information,output block is used to print the output of the resources in the terminal just terraform plan
+# where this output will be usefull? is used to create another resource taking input from one resource like giving the output of the ec2 instances to the input to the route53 records
 
 # output "instance_info" {      
 #   value = aws_instance.web
