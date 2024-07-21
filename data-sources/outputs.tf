@@ -8,4 +8,6 @@ output "aws_ami_id" {
 
 output "vpc_info" {
   value = data.aws_vpc.default
-}
+} 
+
+# another example getting information of the vpc
