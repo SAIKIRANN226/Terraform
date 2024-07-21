@@ -2,6 +2,7 @@
 # 2. -var-file
 # 3. terraform.tfvars
 # 4. ENV variables
+# if you dont find in any of the above then terraform will prompt for the value
 
 variable "ami_id" {
   type = string
@@ -20,7 +21,7 @@ variable "tags" {
     Project = "Roboshop"
     Environment = "DEV"
     Component = "Web"
-    Terraform = "true"
+    Terraform = "true"  # means this ec2 is created using terraform
   }
 }
 
