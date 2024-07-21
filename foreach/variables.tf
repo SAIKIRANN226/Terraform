@@ -1,7 +1,7 @@
 variable "instance_names" {
   type = map
   default = {
-    mongodb = "t3.small"
+    mongodb = "t3.small"   # map is "key = value"
     redis = "t2.micro"
     mysql = "t3.small"
     rabbitmq = "t2.micro"
