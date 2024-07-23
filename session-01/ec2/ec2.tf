@@ -1,8 +1,8 @@
 resource "aws_instance" "web" {
   ami           = "ami-03265a0778a880afb" #devops-practice
   instance_type = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.roboshop-all.id] # this means list and this line taken from the line 11,terraform will automatically takecare of the dependencies,you can see here firt it will create sg and then ec2,no need to follow the sequence also, and this is also a output of security group
-
+  vpc_security_group_ids = [aws_security_group.roboshop-all.id] # this [ ] means list and this line taken from the line 11,terraform will automatically takecare of the dependencies,you can see here firt it will create sg and then ec2,no need to follow the sequence also, and this is also a output of security group beacsue we used .id to get output
+  
   tags = {
     Name = "HelloTerraform"
   }
@@ -11,7 +11,7 @@ resource "aws_instance" "web" {
 resource "aws_security_group" "roboshop-all" { #this is terraform name, for terraform reference only
     name        = var.sg-name # this is for AWS
     description = var.sg-description
-    #vpc_id      = aws_vpc.main.id
+    
 
     ingress {
         description      = "Allow All ports"
@@ -19,7 +19,7 @@ resource "aws_security_group" "roboshop-all" { #this is terraform name, for terr
         to_port          = 0 
         protocol         = "tcp"
         cidr_blocks      = var.cidr_blocks
-        #ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
+        
     }
 
     egress {
