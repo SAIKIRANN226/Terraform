@@ -42,5 +42,5 @@ variable "inbound-from-port" {
 
 variable "cidr_blocks" {
   type = list
-  default = ["0.0.0.0/0"]  # if it is list must be in [] inside it must be in qotes
+  default = ["0.0.0.0/0"]  # if it is list must be in [] inside it must be in qotes (or) CIDR blocks should be in list[] and inside it must in double qotes
 }
