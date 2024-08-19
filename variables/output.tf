@@ -4,7 +4,7 @@
 # output "instance_info" {      
 #   value = aws_instance.web
 # }
-# the above one by terraform apply you will get all info
+# the above one by terraform apply you will get complete information on the terminal thats why we commented this
 
 
 

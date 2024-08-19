@@ -1,7 +1,6 @@
 resource "aws_security_group" "roboshop-all" { #this is terraform name, for terraform reference only
     name        = var.sg-name # this is for AWS
     description = var.sg-description
-    #vpc_id      = aws_vpc.main.id
 
     ingress {
         description      = "Allow All ports"
