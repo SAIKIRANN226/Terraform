@@ -27,7 +27,7 @@ variable "tags" {
 
 variable "sg-name" {
   type = string
-  default = "roboshop-all"
+  default = "roboshop-all"  # if it string then default value must be in double qotes ""
 }
 
 variable "sg-description" {
@@ -37,10 +37,10 @@ variable "sg-description" {
 
 variable "inbound-from-port" {
     type = number
-    default = 0
+    default = 0            # if it is number then default value just number no need to put in ""
 }
 
 variable "cidr_blocks" {
   type = list
-  default = ["0.0.0.0/0"]
+  default = ["0.0.0.0/0"]  # if it is list must be in [] inside it must be in qotes
 }
