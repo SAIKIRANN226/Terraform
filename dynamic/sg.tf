@@ -2,7 +2,7 @@ resource "aws_security_group" "roboshop-all" {
     name        = "dynamic-demo"
     description = "dynamic-demo"
 
-    dynamic ingress {
+    dynamic ingress {  # this is used if any block is repeating
         for_each = var.ingress_rules
         content {
           description      = ingress.value["description"]
