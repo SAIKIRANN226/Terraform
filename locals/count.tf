@@ -18,7 +18,7 @@
 #   records = [local.ip]
 # }
 resource "aws_instance" "web" {
-  ami           = var.ami_id #devops-practice
+  ami           = var.ami_id
   instance_type = local.instance_type
   tags = {
     Name = "locals"
