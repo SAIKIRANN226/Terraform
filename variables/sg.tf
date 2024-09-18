@@ -1,4 +1,4 @@
-resource "aws_security_group" "roboshop-all" { #this is terraform name, for terraform reference only
+resource "aws_security_group" "roboshop-all" { # this is terraform name, for terraform reference only
     name        = var.sg-name # this is for AWS
     description = var.sg-description
 
