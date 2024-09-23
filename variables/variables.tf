@@ -15,7 +15,7 @@ variable "instance_type" {
 }
 
 variable "tags" {
-  type = map
+  type = map       # If default is starting from the flower brases then it is map
   default = {
     Name = "Hello Terraform"
     Project = "Roboshop"
