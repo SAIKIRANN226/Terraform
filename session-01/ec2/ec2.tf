@@ -1,19 +1,19 @@
 resource "aws_instance" "web" {
-  ami           = "ami-0b4f379183e5706b9" #devops-practice
+  ami           = "ami-0b4f379183e5706b9" # devops-practice
   instance_type = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.roboshop-all.id] # this [ ] means list and this line taken from the line 11,terraform will automatically takecare of the dependencies,you can see here firt it will create sg and then ec2,no need to follow the sequence also, and this is also a output of security group beacsue we used .id to get output; line 4 is only used when there is a security group is created
+  vpc_security_group_ids = [aws_security_group.roboshop-all.id] # This [ ] means list and this line taken from the line 11,terraform will automatically takecare of the dependencies,you can see here firt it will create sg and then ec2,no need to follow the sequence also, and this is also a output of security group beacsue we used .id to get output; line 4 is only used when there is a security group is created
   
   tags = {
     Name = "HelloTerraform"
     Environemnt = "dev"
     Component = "web"
     Terraform = "true"
-    Project = "roboshop"
+    Project = "roboshop" # That means this instance is created through terraform
   }
 }
 
-resource "aws_security_group" "roboshop-all" { #this is terraform name, for terraform reference only
-    name        = var.sg-name # this is for AWS
+resource "aws_security_group" "roboshop-all" { # This is terraform name, for terraform reference only
+    name        = var.sg-name # This is for AWS
     description = var.sg-description
     
 
