@@ -5,6 +5,10 @@ resource "aws_instance" "web" {
   
   tags = {
     Name = "HelloTerraform"
+    Environemnt = "dev"
+    Component = "web"
+    Terraform = "true"
+    Project = "roboshop"
   }
 }
 
