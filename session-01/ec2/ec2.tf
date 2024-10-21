@@ -21,7 +21,7 @@ resource "aws_security_group" "roboshop-all" { # This is terraform name, for ter
         description      = "Allow All ports"
         from_port        = var.inbound-from-port # 0 means all ports
         to_port          = 0 
-        protocol         = "tcp"
+        protocol         = "tcp" # Transmission control protocol that allows applications and devices to exchange the data over network
         cidr_blocks      = var.cidr_blocks
         
     }
