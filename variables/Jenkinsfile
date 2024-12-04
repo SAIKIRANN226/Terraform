@@ -38,7 +38,7 @@ pipeline {
             steps {
                     sh '''
                     cd variables
-                    terraform apply -auto-approve
+                    terraform destroy -auto-approve
                     '''
             }
         }
