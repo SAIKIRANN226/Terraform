@@ -27,6 +27,8 @@ pipeline {
                     sh '''
                     cd variables
                     terraform plan
+                    terraform plan -out=planfile
+                    terraform apply planfile
                     '''
             }
         }
