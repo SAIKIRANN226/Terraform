@@ -5,6 +5,10 @@ pipeline {
         }
     }
 
+    parameters {
+        choice(name: 'CHOICE', choices: ['apply', 'destroy'], description: 'Pick something')
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -38,6 +42,13 @@ pipeline {
                     cd variables
                     terraform apply -auto-approve
                     '''
+            }
+        }
+        stage('apply') {
+            when {
+                expression{
+                    params.apply == 'true'
+                }
             }
         }
     }
