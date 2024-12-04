@@ -15,37 +15,28 @@ pipeline {
 
         stage('Terraform Init') {
             steps {
-                script {
-                    // Initialize Terraform
                     sh '''
                     cd variables
                     terraform init -reconfigure
                     '''
-                }
             }
         }
 
         stage('Terraform Plan') {
             steps {
-                script {
-                    // Run Terraform plan to review the changes before applying
                     sh '''
                     cd variables
                     terraform plan
                     '''
-                }
             }
         }
 
         stage('Terraform Apply') {
             steps {
-                script {
-                    // Apply Terraform configuration to create the EC2 instance
                     sh '''
                     cd variables
                     terraform apply -auto-approve
                     '''
-                }
             }
         }
     }
