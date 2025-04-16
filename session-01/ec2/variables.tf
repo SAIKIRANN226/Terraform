@@ -9,7 +9,6 @@ variable "sg-description" {
 }
 
 variable "inbound-from-port" {
-  # type = number
   default = 0
 }
 
