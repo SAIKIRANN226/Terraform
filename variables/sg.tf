@@ -1,5 +1,5 @@
-resource "aws_security_group" "roboshop-all" { # this is terraform name, for terraform reference only
-    name        = var.sg-name # this is for AWS
+resource "aws_security_group" "roboshop-all" { # This is terraform name, for terraform reference only
+    name        = var.sg-name # This is for AWS
     description = var.sg-description
 
     ingress {
