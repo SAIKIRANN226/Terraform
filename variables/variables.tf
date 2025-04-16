@@ -15,8 +15,8 @@ variable "instance_type" {
 }
 
 variable "tags" {
-  type = map       # If default is starting from the flower brases then it is a map, this is the way to declare a map
-  default = {
+  type = map       
+  default = {  # If default is starting from the flower brases then it is a map, this is the way to declare a map
     Name = "Hello Terraform"
     Project = "Roboshop"
     Environment = "DEV"
