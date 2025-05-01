@@ -1,10 +1,10 @@
-resource "aws_security_group" "roboshop-all" { # This is terraform name, for terraform reference only
-    name        = var.sg-name # This is for AWS
+resource "aws_security_group" "roboshop-all" {
+    name        = var.sg-name
     description = var.sg-description
 
     ingress {
         description      = "Allow All ports"
-        from_port        = var.inbound-from-port # 0 means all ports
+        from_port        = var.inbound-from-port
         to_port          = 0 
         protocol         = "tcp"
         cidr_blocks      = var.cidr_blocks

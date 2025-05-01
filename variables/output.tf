@@ -1,6 +1,6 @@
-# Attribute reference ---> It will give all the information,output block is used to print the output of the resources in the terminal just terraform plan
+# Attribute reference ---> It will give all the information, output block is used to print the output of the resources in the terminal just terraform plan to know how the output will print
 
-# where this output will be useful? is used to create another resource by giving output of one instance to another resource as input (OR) one ouput can be given as input to the other
+# where this output will be useful ? is used to create another resource by giving output of one instance to another resource as input (OR) one ouput can be given as input to the other
 
 # output "instance_info" {      
 #   value = aws_instance.web

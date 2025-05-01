@@ -4,7 +4,7 @@ data "aws_ami" "centos8"{
 
     filter {
         name   = "name"
-        values = ["Centos-8-DevOps-Practice"]
+        values = ["Centos-8-DevOps-Practice"]  # Nothing but name of ami
     }
 
     filter {
@@ -24,7 +24,7 @@ data "aws_ami" "aws-linux-2"{
 
     filter {
         name   = "name"
-        values = ["amzn2-ami-kernel-5.10-hvm-*"]   # if you put -* after hvm when ever there is a patch release automatically it will get it dynamically
+        values = ["amzn2-ami-kernel-5.10-hvm-*"]   # If you put -* after hvm when ever there is a patch released automatically it will get it dynamically
     }
 
     filter {

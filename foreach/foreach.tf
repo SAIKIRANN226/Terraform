@@ -21,4 +21,4 @@ resource "aws_route53_record" "www" {
 #   value = aws_instance.web
 # }
 
-# the above code is commented because it is taking too much terminal space it is showing more information we tested how the output will be comming
+# The above output is just to know how the output will come for instances and later we commented this because it is taking too terminal space it is showing more information we tested how the output will be comming

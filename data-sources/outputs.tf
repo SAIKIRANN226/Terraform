@@ -10,4 +10,4 @@ output "vpc_info" {
   value = data.aws_vpc.default
 } 
 
-# another example is getting information of the vpc
+# Another example is getting information of the existing default vpc 
