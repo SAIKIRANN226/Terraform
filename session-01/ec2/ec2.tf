@@ -34,3 +34,6 @@ resource "aws_security_group" "roboshop-all" { # This is terraform name, for ter
         Name = "roboshop-all-aws" # This name will only show as a securitygroup name in aws
     }
 }
+
+
+# Note:- Only Tags names will reflect in the aws console, so tags is very important
