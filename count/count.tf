@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  count = length(var.instance_names) # length function will calculate the list automatically
+  count = length(var.instance_names) # Length function will calculate the list automatically
   ami           = var.ami_id
   instance_type = var.instance_names[count.index] == "mongodb" || var.instance_names[count.index] == "mysql" || var.instance_names[count.index] == "shipping" ? "t3.small" : "t2.micro"
   tags = {
@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
 resource "aws_route53_record" "www" {
   count = length(var.instance_names)
   zone_id = var.zone_id # Zone id can found in the hosted zones
-  name    = "${var.instance_names[count.index]}.${var.domain_name}" # Interpolation(mixing variable + static text)before this delete old records if exists
+  name    = "${var.instance_names[count.index]}.${var.domain_name}" # Interpolation (mixing variable + static text) before this delete old records if exists
   type    = "A"
   ttl     = 1
   records = [var.instance_names[count.index] == "web" ? aws_instance.web[count.index].public_ip : aws_instance.web[count.index].private_ip]

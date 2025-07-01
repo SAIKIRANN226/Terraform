@@ -1,6 +1,6 @@
 variable "isProd" {
   type = bool
-  default = true # When you give isProd:false it will create t2.small, when you give isProd:true then it will create t3.small
+  default = true # When you give isProd = false, it will create t2.small, when you give isProd = true then it will create t3.small
 }
 
 variable "ami_id" {

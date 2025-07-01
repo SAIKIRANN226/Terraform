@@ -6,4 +6,4 @@ locals {
 
 
 
-# Then how to call a local ---> "local.instance_type"
+# Then how to call a local ? ---> "local.name" || "local.training || ""local.instance_type"

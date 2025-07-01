@@ -18,6 +18,6 @@ variable "cidr_blocks" {
 }
 
 
-# Make sure to put default value in double quotes if it is a string type
+# Make sure to put default value in double quotes, if it is a string type.
 # If it is number then no need to put ""
-# If it is list must be in [], inside it must be in double qotes (or) CIDR blocks should be in list[] and inside it must in double qotes
+# If it is list must be in [], inside it must be in double qotes (or) CIDR blocks should be in list[] and inside it must in double qotes.

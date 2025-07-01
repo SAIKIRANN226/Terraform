@@ -2,9 +2,9 @@ resource "aws_security_group" "roboshop-all" {
     name        = "dynamic-demo"
     description = "dynamic-demo"
 
-    dynamic ingress {  # In this example ingress block is repeating so we used word "dynamic" before ingress
+    dynamic ingress {  # In this example ingress block is repeating so we used word "dynamic" before ingress.
         for_each = var.ingress_rules
-        content {   # Which content is repeating ? like below lines
+        content {   # Which content is repeating ? like below lines.
           description      = ingress.value["description"]
           from_port        = ingress.value["from_port"]
           to_port          = ingress.value["to_port"]
